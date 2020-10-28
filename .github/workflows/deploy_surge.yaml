@@ -25,10 +25,10 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
          node-version: 14       
-      name: Install Surge
-         run: npm Install -g surge
-     - name: Run Surge
-     - run: Surge ./ bootcampnewapp.surge.sh --token ${{secret.SURGE_TOKEN}}
+      - name: Install Surge
+        run: npm install -g surge
+      - name: Run Surge
+        run: Surge ./ bootcampnewapp.surge.sh --token ${{secrets.SURGE_TOKEN}}
          
         
        
